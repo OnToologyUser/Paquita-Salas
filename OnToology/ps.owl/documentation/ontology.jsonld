@@ -1,0 +1,1070 @@
+[ {
+  "@id" : "_:genid1",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2002/07/owl#unionOf" : [ {
+    "@list" : [ {
+      "@id" : "http://www.semanticweb.org/jessanrod3/ontologies/2022/2/Series#Character"
+    }, {
+      "@id" : "http://www.semanticweb.org/jessanrod3/ontologies/2022/2/Series#Person"
+    } ]
+  } ]
+}, {
+  "@id" : "_:genid10",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2002/07/owl#unionOf" : [ {
+    "@list" : [ {
+      "@id" : "http://www.semanticweb.org/jessanrod3/ontologies/2022/2/Series#Person"
+    }, {
+      "@id" : "http://www.semanticweb.org/jessanrod3/ontologies/2022/2/Series#Series"
+    } ]
+  } ]
+}, {
+  "@id" : "_:genid13",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2002/07/owl#unionOf" : [ {
+    "@list" : [ {
+      "@id" : "http://www.semanticweb.org/jessanrod3/ontologies/2022/2/Series#Character"
+    }, {
+      "@id" : "http://www.semanticweb.org/jessanrod3/ontologies/2022/2/Series#Singer"
+    } ]
+  } ]
+}, {
+  "@id" : "_:genid16",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2002/07/owl#unionOf" : [ {
+    "@list" : [ {
+      "@id" : "http://www.semanticweb.org/jessanrod3/ontologies/2022/2/Series#Person"
+    }, {
+      "@id" : "http://www.semanticweb.org/jessanrod3/ontologies/2022/2/Series#Series"
+    } ]
+  } ]
+}, {
+  "@id" : "_:genid19",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2002/07/owl#unionOf" : [ {
+    "@list" : [ {
+      "@id" : "http://www.semanticweb.org/jessanrod3/ontologies/2022/2/Series#Season"
+    }, {
+      "@id" : "http://www.semanticweb.org/jessanrod3/ontologies/2022/2/Series#Series"
+    } ]
+  } ]
+}, {
+  "@id" : "_:genid22",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#allValuesFrom" : [ {
+    "@id" : "http://www.semanticweb.org/jessanrod3/ontologies/2022/2/Series#Actor"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://www.semanticweb.org/jessanrod3/ontologies/2022/2/Series#hasBeenWonBy"
+  } ]
+}, {
+  "@id" : "_:genid23",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2002/07/owl#unionOf" : [ {
+    "@list" : [ {
+      "@id" : "http://www.semanticweb.org/jessanrod3/ontologies/2022/2/Series#Series"
+    }, {
+      "@id" : "_:genid25"
+    } ]
+  } ]
+}, {
+  "@id" : "_:genid25",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#maxQualifiedCardinality" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
+    "@value" : "1"
+  } ],
+  "http://www.w3.org/2002/07/owl#onClass" : [ {
+    "@id" : "http://www.semanticweb.org/jessanrod3/ontologies/2022/2/Series#Person"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://www.semanticweb.org/jessanrod3/ontologies/2022/2/Series#hasBeenWonBy"
+  } ]
+}, {
+  "@id" : "_:genid27",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#allValuesFrom" : [ {
+    "@id" : "http://www.semanticweb.org/jessanrod3/ontologies/2022/2/Series#Series"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://www.semanticweb.org/jessanrod3/ontologies/2022/2/Series#hasBeenWonBy"
+  } ]
+}, {
+  "@id" : "_:genid28",
+  "@type" : [ "http://www.w3.org/2003/11/swrl#Imp" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "if an actor interprets a character and the character appears in a Season, then the actor appears in the season"
+  } ],
+  "http://www.w3.org/2003/11/swrl#body" : [ {
+    "@list" : [ {
+      "@id" : "_:genid38"
+    }, {
+      "@id" : "_:genid36"
+    }, {
+      "@id" : "_:genid34"
+    }, {
+      "@id" : "_:genid32"
+    }, {
+      "@id" : "_:genid30"
+    } ]
+  } ],
+  "http://www.w3.org/2003/11/swrl#head" : [ {
+    "@list" : [ {
+      "@id" : "_:genid40"
+    } ]
+  } ]
+}, {
+  "@id" : "_:genid30",
+  "@type" : [ "http://www.w3.org/2003/11/swrl#ClassAtom" ],
+  "http://www.w3.org/2003/11/swrl#argument1" : [ {
+    "@id" : "urn:swrl:var#z"
+  } ],
+  "http://www.w3.org/2003/11/swrl#classPredicate" : [ {
+    "@id" : "http://www.semanticweb.org/jessanrod3/ontologies/2022/2/Series#Season"
+  } ]
+}, {
+  "@id" : "_:genid32",
+  "@type" : [ "http://www.w3.org/2003/11/swrl#IndividualPropertyAtom" ],
+  "http://www.w3.org/2003/11/swrl#argument1" : [ {
+    "@id" : "urn:swrl:var#y"
+  } ],
+  "http://www.w3.org/2003/11/swrl#argument2" : [ {
+    "@id" : "urn:swrl:var#z"
+  } ],
+  "http://www.w3.org/2003/11/swrl#propertyPredicate" : [ {
+    "@id" : "http://www.semanticweb.org/jessanrod3/ontologies/2022/2/Series#appearsIn"
+  } ]
+}, {
+  "@id" : "_:genid34",
+  "@type" : [ "http://www.w3.org/2003/11/swrl#IndividualPropertyAtom" ],
+  "http://www.w3.org/2003/11/swrl#argument1" : [ {
+    "@id" : "urn:swrl:var#x"
+  } ],
+  "http://www.w3.org/2003/11/swrl#argument2" : [ {
+    "@id" : "urn:swrl:var#y"
+  } ],
+  "http://www.w3.org/2003/11/swrl#propertyPredicate" : [ {
+    "@id" : "http://www.semanticweb.org/jessanrod3/ontologies/2022/2/Series#interprets"
+  } ]
+}, {
+  "@id" : "_:genid36",
+  "@type" : [ "http://www.w3.org/2003/11/swrl#ClassAtom" ],
+  "http://www.w3.org/2003/11/swrl#argument1" : [ {
+    "@id" : "urn:swrl:var#y"
+  } ],
+  "http://www.w3.org/2003/11/swrl#classPredicate" : [ {
+    "@id" : "http://www.semanticweb.org/jessanrod3/ontologies/2022/2/Series#Character"
+  } ]
+}, {
+  "@id" : "_:genid38",
+  "@type" : [ "http://www.w3.org/2003/11/swrl#ClassAtom" ],
+  "http://www.w3.org/2003/11/swrl#argument1" : [ {
+    "@id" : "urn:swrl:var#x"
+  } ],
+  "http://www.w3.org/2003/11/swrl#classPredicate" : [ {
+    "@id" : "http://www.semanticweb.org/jessanrod3/ontologies/2022/2/Series#Actor"
+  } ]
+}, {
+  "@id" : "_:genid4",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2002/07/owl#unionOf" : [ {
+    "@list" : [ {
+      "@id" : "http://www.semanticweb.org/jessanrod3/ontologies/2022/2/Series#Season"
+    }, {
+      "@id" : "http://www.semanticweb.org/jessanrod3/ontologies/2022/2/Series#Series"
+    } ]
+  } ]
+}, {
+  "@id" : "_:genid40",
+  "@type" : [ "http://www.w3.org/2003/11/swrl#IndividualPropertyAtom" ],
+  "http://www.w3.org/2003/11/swrl#argument1" : [ {
+    "@id" : "urn:swrl:var#x"
+  } ],
+  "http://www.w3.org/2003/11/swrl#argument2" : [ {
+    "@id" : "urn:swrl:var#z"
+  } ],
+  "http://www.w3.org/2003/11/swrl#propertyPredicate" : [ {
+    "@id" : "http://www.semanticweb.org/jessanrod3/ontologies/2022/2/Series#appearsIn"
+  } ]
+}, {
+  "@id" : "_:genid41",
+  "@type" : [ "http://www.w3.org/2003/11/swrl#Imp" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "if an actor interprets him(her)self, value = true"
+  } ],
+  "http://www.w3.org/2003/11/swrl#body" : [ {
+    "@list" : [ {
+      "@id" : "_:genid45"
+    }, {
+      "@id" : "_:genid43"
+    } ]
+  } ],
+  "http://www.w3.org/2003/11/swrl#head" : [ {
+    "@list" : [ {
+      "@id" : "_:genid47"
+    } ]
+  } ]
+}, {
+  "@id" : "_:genid43",
+  "@type" : [ "http://www.w3.org/2003/11/swrl#IndividualPropertyAtom" ],
+  "http://www.w3.org/2003/11/swrl#argument1" : [ {
+    "@id" : "urn:swrl:var#x"
+  } ],
+  "http://www.w3.org/2003/11/swrl#argument2" : [ {
+    "@id" : "urn:swrl:var#x"
+  } ],
+  "http://www.w3.org/2003/11/swrl#propertyPredicate" : [ {
+    "@id" : "http://www.semanticweb.org/jessanrod3/ontologies/2022/2/Series#interprets"
+  } ]
+}, {
+  "@id" : "_:genid45",
+  "@type" : [ "http://www.w3.org/2003/11/swrl#ClassAtom" ],
+  "http://www.w3.org/2003/11/swrl#argument1" : [ {
+    "@id" : "urn:swrl:var#x"
+  } ],
+  "http://www.w3.org/2003/11/swrl#classPredicate" : [ {
+    "@id" : "http://www.semanticweb.org/jessanrod3/ontologies/2022/2/Series#Actor"
+  } ]
+}, {
+  "@id" : "_:genid47",
+  "@type" : [ "http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom" ],
+  "http://www.w3.org/2003/11/swrl#argument1" : [ {
+    "@id" : "urn:swrl:var#x"
+  } ],
+  "http://www.w3.org/2003/11/swrl#argument2" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#boolean",
+    "@value" : "true"
+  } ],
+  "http://www.w3.org/2003/11/swrl#propertyPredicate" : [ {
+    "@id" : "http://www.semanticweb.org/jessanrod3/ontologies/2022/2/Series#interpretsThemselves"
+  } ]
+}, {
+  "@id" : "_:genid48",
+  "@type" : [ "http://www.w3.org/2003/11/swrl#Imp" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "If has won at least 1 award, hasAward is true"
+  } ],
+  "http://www.w3.org/2003/11/swrl#body" : [ {
+    "@list" : [ {
+      "@id" : "_:genid54"
+    }, {
+      "@id" : "_:genid52"
+    }, {
+      "@id" : "_:genid50"
+    } ]
+  } ],
+  "http://www.w3.org/2003/11/swrl#head" : [ {
+    "@list" : [ {
+      "@id" : "_:genid56"
+    } ]
+  } ]
+}, {
+  "@id" : "_:genid50",
+  "@type" : [ "http://www.w3.org/2003/11/swrl#IndividualPropertyAtom" ],
+  "http://www.w3.org/2003/11/swrl#argument1" : [ {
+    "@id" : "urn:swrl:var#x"
+  } ],
+  "http://www.w3.org/2003/11/swrl#argument2" : [ {
+    "@id" : "urn:swrl:var#y"
+  } ],
+  "http://www.w3.org/2003/11/swrl#propertyPredicate" : [ {
+    "@id" : "http://www.semanticweb.org/jessanrod3/ontologies/2022/2/Series#hasWon"
+  } ]
+}, {
+  "@id" : "_:genid52",
+  "@type" : [ "http://www.w3.org/2003/11/swrl#ClassAtom" ],
+  "http://www.w3.org/2003/11/swrl#argument1" : [ {
+    "@id" : "urn:swrl:var#y"
+  } ],
+  "http://www.w3.org/2003/11/swrl#classPredicate" : [ {
+    "@id" : "http://www.semanticweb.org/jessanrod3/ontologies/2022/2/Series#Award"
+  } ]
+}, {
+  "@id" : "_:genid54",
+  "@type" : [ "http://www.w3.org/2003/11/swrl#ClassAtom" ],
+  "http://www.w3.org/2003/11/swrl#argument1" : [ {
+    "@id" : "urn:swrl:var#x"
+  } ],
+  "http://www.w3.org/2003/11/swrl#classPredicate" : [ {
+    "@id" : "http://www.semanticweb.org/jessanrod3/ontologies/2022/2/Series#Person"
+  } ]
+}, {
+  "@id" : "_:genid56",
+  "@type" : [ "http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom" ],
+  "http://www.w3.org/2003/11/swrl#argument1" : [ {
+    "@id" : "urn:swrl:var#x"
+  } ],
+  "http://www.w3.org/2003/11/swrl#argument2" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#boolean",
+    "@value" : "true"
+  } ],
+  "http://www.w3.org/2003/11/swrl#propertyPredicate" : [ {
+    "@id" : "http://www.semanticweb.org/jessanrod3/ontologies/2022/2/Series#hasAward"
+  } ]
+}, {
+  "@id" : "_:genid57",
+  "@type" : [ "http://www.w3.org/2003/11/swrl#Imp" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "If a song is sung by a singer, the song belongs to the soundtrack"
+  } ],
+  "http://www.w3.org/2003/11/swrl#body" : [ {
+    "@list" : [ {
+      "@id" : "_:genid63"
+    }, {
+      "@id" : "_:genid61"
+    }, {
+      "@id" : "_:genid59"
+    } ]
+  } ],
+  "http://www.w3.org/2003/11/swrl#head" : [ {
+    "@list" : [ {
+      "@id" : "_:genid65"
+    } ]
+  } ]
+}, {
+  "@id" : "_:genid59",
+  "@type" : [ "http://www.w3.org/2003/11/swrl#ClassAtom" ],
+  "http://www.w3.org/2003/11/swrl#argument1" : [ {
+    "@id" : "urn:swrl:var#x"
+  } ],
+  "http://www.w3.org/2003/11/swrl#classPredicate" : [ {
+    "@id" : "http://www.semanticweb.org/jessanrod3/ontologies/2022/2/Series#Singer"
+  } ]
+}, {
+  "@id" : "_:genid61",
+  "@type" : [ "http://www.w3.org/2003/11/swrl#IndividualPropertyAtom" ],
+  "http://www.w3.org/2003/11/swrl#argument1" : [ {
+    "@id" : "urn:swrl:var#x"
+  } ],
+  "http://www.w3.org/2003/11/swrl#argument2" : [ {
+    "@id" : "urn:swrl:var#y"
+  } ],
+  "http://www.w3.org/2003/11/swrl#propertyPredicate" : [ {
+    "@id" : "http://www.semanticweb.org/jessanrod3/ontologies/2022/2/Series#sings"
+  } ]
+}, {
+  "@id" : "_:genid63",
+  "@type" : [ "http://www.w3.org/2003/11/swrl#ClassAtom" ],
+  "http://www.w3.org/2003/11/swrl#argument1" : [ {
+    "@id" : "urn:swrl:var#y"
+  } ],
+  "http://www.w3.org/2003/11/swrl#classPredicate" : [ {
+    "@id" : "http://www.semanticweb.org/jessanrod3/ontologies/2022/2/Series#Song"
+  } ]
+}, {
+  "@id" : "_:genid65",
+  "@type" : [ "http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom" ],
+  "http://www.w3.org/2003/11/swrl#argument1" : [ {
+    "@id" : "urn:swrl:var#y"
+  } ],
+  "http://www.w3.org/2003/11/swrl#argument2" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#boolean",
+    "@value" : "true"
+  } ],
+  "http://www.w3.org/2003/11/swrl#propertyPredicate" : [ {
+    "@id" : "http://www.semanticweb.org/jessanrod3/ontologies/2022/2/Series#soundtrackSong"
+  } ]
+}, {
+  "@id" : "_:genid7",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2002/07/owl#unionOf" : [ {
+    "@list" : [ {
+      "@id" : "http://www.semanticweb.org/jessanrod3/ontologies/2022/2/Series#Person"
+    }, {
+      "@id" : "http://www.semanticweb.org/jessanrod3/ontologies/2022/2/Series#Series"
+    } ]
+  } ]
+}, {
+  "@id" : "http://purl.org/dc/terms/license",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "http://www.semanticweb.org/jessanrod3/ontologies/2022/2/Series",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Ontology" ],
+  "http://purl.org/dc/terms/license" : [ {
+    "@language" : "en",
+    "@value" : "Version 1.0"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Paquita Salas Ontology\nCreated by Jesús Sánchez Rodríguez"
+  } ],
+  "http://www.w3.org/2002/07/owl#versionIRI" : [ {
+    "@id" : "http://www.semanticweb.org/jessanrod3/ontologies/2022/2/Series/1.0"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/jessanrod3/ontologies/2022/2/Series#5_deditos",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://www.semanticweb.org/jessanrod3/ontologies/2022/2/Series#Song"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/jessanrod3/ontologies/2022/2/Series#ActingAward",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Awards related to actors"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.semanticweb.org/jessanrod3/ontologies/2022/2/Series#Award"
+  }, {
+    "@id" : "_:genid22"
+  } ],
+  "http://www.w3.org/2002/07/owl#disjointWith" : [ {
+    "@id" : "http://www.semanticweb.org/jessanrod3/ontologies/2022/2/Series#SeriesAward"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/jessanrod3/ontologies/2022/2/Series#Actor",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "This classe represents an actor or actress"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#sameAs" : [ {
+    "@language" : "en",
+    "@value" : "https://dbpedia.org/ontology/Actor"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.semanticweb.org/jessanrod3/ontologies/2022/2/Series#Person"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/jessanrod3/ontologies/2022/2/Series#Anna_Castillo",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.semanticweb.org/jessanrod3/ontologies/2022/2/Series#interprets" : [ {
+    "@id" : "http://www.semanticweb.org/jessanrod3/ontologies/2022/2/Series#Belén_de_Lucas"
+  } ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://www.semanticweb.org/jessanrod3/ontologies/2022/2/Series#Actor"
+  }, {
+    "@id" : "http://www.semanticweb.org/jessanrod3/ontologies/2022/2/Series#Woman"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/jessanrod3/ontologies/2022/2/Series#Award",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Awards won (or nominated to) by a person or series"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#sameAs" : [ {
+    "@language" : "en",
+    "@value" : "https://dbpedia.org/ontology/Award"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.w3.org/2002/07/owl#Thing"
+  }, {
+    "@id" : "_:genid23"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/jessanrod3/ontologies/2022/2/Series#Belinda_Washington",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.semanticweb.org/jessanrod3/ontologies/2022/2/Series#interprets" : [ {
+    "@id" : "http://www.semanticweb.org/jessanrod3/ontologies/2022/2/Series#Belinda_Washington"
+  } ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://www.semanticweb.org/jessanrod3/ontologies/2022/2/Series#Actor"
+  }, {
+    "@id" : "http://www.semanticweb.org/jessanrod3/ontologies/2022/2/Series#GuestCharacter"
+  }, {
+    "@id" : "http://www.semanticweb.org/jessanrod3/ontologies/2022/2/Series#Woman"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/jessanrod3/ontologies/2022/2/Series#Belén_Cuesta",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.semanticweb.org/jessanrod3/ontologies/2022/2/Series#interprets" : [ {
+    "@id" : "http://www.semanticweb.org/jessanrod3/ontologies/2022/2/Series#Magüi_Moreno"
+  } ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://www.semanticweb.org/jessanrod3/ontologies/2022/2/Series#Actor"
+  }, {
+    "@id" : "http://www.semanticweb.org/jessanrod3/ontologies/2022/2/Series#Woman"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/jessanrod3/ontologies/2022/2/Series#Belén_de_Lucas",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://www.semanticweb.org/jessanrod3/ontologies/2022/2/Series#GuestCharacter"
+  }, {
+    "@id" : "http://www.semanticweb.org/jessanrod3/ontologies/2022/2/Series#MainCharacter"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/jessanrod3/ontologies/2022/2/Series#BestComedySeriesAward",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Award related to the best comedy series"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.semanticweb.org/jessanrod3/ontologies/2022/2/Series#SeriesAward"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/jessanrod3/ontologies/2022/2/Series#BestMainActorAward",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Award related to the best main male actor"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.semanticweb.org/jessanrod3/ontologies/2022/2/Series#ActingAward"
+  } ],
+  "http://www.w3.org/2002/07/owl#disjointWith" : [ {
+    "@id" : "http://www.semanticweb.org/jessanrod3/ontologies/2022/2/Series#BestSupportingActressAward"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/jessanrod3/ontologies/2022/2/Series#BestSupportingActressAward",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Award related to the best supporting actress"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.semanticweb.org/jessanrod3/ontologies/2022/2/Series#ActingAward"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/jessanrod3/ontologies/2022/2/Series#Best_Comedy_Series_2017",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://www.semanticweb.org/jessanrod3/ontologies/2022/2/Series#BestComedySeriesAward"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/jessanrod3/ontologies/2022/2/Series#Best_Comedy_Series_2019",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://www.semanticweb.org/jessanrod3/ontologies/2022/2/Series#BestComedySeriesAward"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/jessanrod3/ontologies/2022/2/Series#Best_Comedy_Series_2020",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://www.semanticweb.org/jessanrod3/ontologies/2022/2/Series#BestComedySeriesAward"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/jessanrod3/ontologies/2022/2/Series#Best_Main_Actor_2017",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://www.semanticweb.org/jessanrod3/ontologies/2022/2/Series#BestMainActorAward"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/jessanrod3/ontologies/2022/2/Series#Best_Main_Actor_2019",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://www.semanticweb.org/jessanrod3/ontologies/2022/2/Series#BestMainActorAward"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/jessanrod3/ontologies/2022/2/Series#Best_Main_Actor_2020",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://www.semanticweb.org/jessanrod3/ontologies/2022/2/Series#BestMainActorAward"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/jessanrod3/ontologies/2022/2/Series#Best_Supporting_Actrees_Award_2017",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://www.semanticweb.org/jessanrod3/ontologies/2022/2/Series#BestSupportingActressAward"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/jessanrod3/ontologies/2022/2/Series#Best_Supporting_Actrees_Award_2019",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://www.semanticweb.org/jessanrod3/ontologies/2022/2/Series#BestSupportingActressAward"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/jessanrod3/ontologies/2022/2/Series#Best_Supporting_Actrees_Award_2020",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://www.semanticweb.org/jessanrod3/ontologies/2022/2/Series#BestSupportingActressAward"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/jessanrod3/ontologies/2022/2/Series#Brays_Efe",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.semanticweb.org/jessanrod3/ontologies/2022/2/Series#interprets" : [ {
+    "@id" : "http://www.semanticweb.org/jessanrod3/ontologies/2022/2/Series#Paquita_Salas"
+  } ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://www.semanticweb.org/jessanrod3/ontologies/2022/2/Series#Actor"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/jessanrod3/ontologies/2022/2/Series#Bárbara_Valiente",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://www.semanticweb.org/jessanrod3/ontologies/2022/2/Series#GuestCharacter"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/jessanrod3/ontologies/2022/2/Series#Character",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "This class represents a character in the series"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#sameAs" : [ {
+    "@language" : "en",
+    "@value" : "https://dbpedia.org/ontology/FictionalCharacter"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/jessanrod3/ontologies/2022/2/Series#Creator",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "This class represents a series creator"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.semanticweb.org/jessanrod3/ontologies/2022/2/Series#Person"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/jessanrod3/ontologies/2022/2/Series#Director",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "This class represents a series director"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.semanticweb.org/jessanrod3/ontologies/2022/2/Series#Person"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/jessanrod3/ontologies/2022/2/Series#GuestCharacter",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "This class represents a guest character"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.semanticweb.org/jessanrod3/ontologies/2022/2/Series#Character"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/jessanrod3/ontologies/2022/2/Series#Lidia_San_José",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.semanticweb.org/jessanrod3/ontologies/2022/2/Series#interprets" : [ {
+    "@id" : "http://www.semanticweb.org/jessanrod3/ontologies/2022/2/Series#Lidia_San_José"
+  } ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://www.semanticweb.org/jessanrod3/ontologies/2022/2/Series#Actor"
+  }, {
+    "@id" : "http://www.semanticweb.org/jessanrod3/ontologies/2022/2/Series#Woman"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/jessanrod3/ontologies/2022/2/Series#Magüi_Moreno",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://www.semanticweb.org/jessanrod3/ontologies/2022/2/Series#MainCharacter"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/jessanrod3/ontologies/2022/2/Series#MainCharacter",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "This class represents the main character(s)"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.semanticweb.org/jessanrod3/ontologies/2022/2/Series#Character"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/jessanrod3/ontologies/2022/2/Series#Man",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "This class represents a male human"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#sameAs" : [ {
+    "@language" : "en",
+    "@value" : "https://dbpedia.org/ontology/Man"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.semanticweb.org/jessanrod3/ontologies/2022/2/Series#Person"
+  } ],
+  "http://www.w3.org/2002/07/owl#disjointWith" : [ {
+    "@id" : "http://www.semanticweb.org/jessanrod3/ontologies/2022/2/Series#Woman"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/jessanrod3/ontologies/2022/2/Series#Mariona",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://www.semanticweb.org/jessanrod3/ontologies/2022/2/Series#MainCharacter"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/jessanrod3/ontologies/2022/2/Series#Mariona_Terés",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.semanticweb.org/jessanrod3/ontologies/2022/2/Series#interprets" : [ {
+    "@id" : "http://www.semanticweb.org/jessanrod3/ontologies/2022/2/Series#Mariona"
+  } ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://www.semanticweb.org/jessanrod3/ontologies/2022/2/Series#Actor"
+  }, {
+    "@id" : "http://www.semanticweb.org/jessanrod3/ontologies/2022/2/Series#Woman"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/jessanrod3/ontologies/2022/2/Series#Noemí_Argüelles",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.semanticweb.org/jessanrod3/ontologies/2022/2/Series#sings" : [ {
+    "@id" : "http://www.semanticweb.org/jessanrod3/ontologies/2022/2/Series#5_deditos"
+  } ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://www.semanticweb.org/jessanrod3/ontologies/2022/2/Series#GuestCharacter"
+  }, {
+    "@id" : "http://www.semanticweb.org/jessanrod3/ontologies/2022/2/Series#MainCharacter"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/jessanrod3/ontologies/2022/2/Series#PaquitaSalas",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.semanticweb.org/jessanrod3/ontologies/2022/2/Series#hasWon" : [ {
+    "@id" : "http://www.semanticweb.org/jessanrod3/ontologies/2022/2/Series#Best_Comedy_Series_2017"
+  }, {
+    "@id" : "http://www.semanticweb.org/jessanrod3/ontologies/2022/2/Series#Best_Comedy_Series_2019"
+  }, {
+    "@id" : "http://www.semanticweb.org/jessanrod3/ontologies/2022/2/Series#Best_Comedy_Series_2020"
+  } ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://www.semanticweb.org/jessanrod3/ontologies/2022/2/Series#Series"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "es",
+    "@value" : "Serie Paquita Salas"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/jessanrod3/ontologies/2022/2/Series#Paquita_Salas",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.semanticweb.org/jessanrod3/ontologies/2022/2/Series#appearsIn" : [ {
+    "@id" : "http://www.semanticweb.org/jessanrod3/ontologies/2022/2/Series#Season1"
+  }, {
+    "@id" : "http://www.semanticweb.org/jessanrod3/ontologies/2022/2/Series#Season2"
+  }, {
+    "@id" : "http://www.semanticweb.org/jessanrod3/ontologies/2022/2/Series#Season3"
+  } ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://www.semanticweb.org/jessanrod3/ontologies/2022/2/Series#MainCharacter"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/jessanrod3/ontologies/2022/2/Series#Person",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "This class represents a real person"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#sameAs" : [ {
+    "@language" : "en",
+    "@value" : "https://dbpedia.org/ontology/Person"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/jessanrod3/ontologies/2022/2/Series#RecurrentCharacter",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "This class represents current characters"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.semanticweb.org/jessanrod3/ontologies/2022/2/Series#Character"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/jessanrod3/ontologies/2022/2/Series#Rosalía",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.semanticweb.org/jessanrod3/ontologies/2022/2/Series#sings" : [ {
+    "@id" : "http://www.semanticweb.org/jessanrod3/ontologies/2022/2/Series#¡Ay,_Paquita!"
+  } ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://www.semanticweb.org/jessanrod3/ontologies/2022/2/Series#Singer"
+  }, {
+    "@id" : "http://www.semanticweb.org/jessanrod3/ontologies/2022/2/Series#Woman"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/jessanrod3/ontologies/2022/2/Series#Season",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "This class represents a series' season"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/jessanrod3/ontologies/2022/2/Series#Season1",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://www.semanticweb.org/jessanrod3/ontologies/2022/2/Series#Season"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/jessanrod3/ontologies/2022/2/Series#Season2",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://www.semanticweb.org/jessanrod3/ontologies/2022/2/Series#Season"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/jessanrod3/ontologies/2022/2/Series#Season3",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://www.semanticweb.org/jessanrod3/ontologies/2022/2/Series#Season"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/jessanrod3/ontologies/2022/2/Series#Sergio_Dalma",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.semanticweb.org/jessanrod3/ontologies/2022/2/Series#sings" : [ {
+    "@id" : "http://www.semanticweb.org/jessanrod3/ontologies/2022/2/Series#¡Ay,_Paquita!"
+  } ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://www.semanticweb.org/jessanrod3/ontologies/2022/2/Series#Man"
+  }, {
+    "@id" : "http://www.semanticweb.org/jessanrod3/ontologies/2022/2/Series#Singer"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/jessanrod3/ontologies/2022/2/Series#Series",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "This class denotes the serie"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#sameAs" : [ {
+    "@language" : "en",
+    "@value" : "http://dbpedia.org/ontology/TelevisionShow"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/jessanrod3/ontologies/2022/2/Series#SeriesAward",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Award related to a series"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.semanticweb.org/jessanrod3/ontologies/2022/2/Series#Award"
+  }, {
+    "@id" : "_:genid27"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/jessanrod3/ontologies/2022/2/Series#SeriesCountry",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "The country where series is based in"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#sameAs" : [ {
+    "@language" : "en",
+    "@value" : "https://dbpedia.org/property/country"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/jessanrod3/ontologies/2022/2/Series#SeriesGenre",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Genre of series"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#sameAs" : [ {
+    "@language" : "en",
+    "@value" : "https://dbpedia.org/ontology/Genre"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/jessanrod3/ontologies/2022/2/Series#SeriesLanguage",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "This class represents the main language spoken in the series"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#sameAs" : [ {
+    "@language" : "en",
+    "@value" : "http://dbpedia.org/property/language"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/jessanrod3/ontologies/2022/2/Series#Singer",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Singer of series' main song"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#sameAs" : [ {
+    "@value" : "https://dbpedia.org/ontology/Singer"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.semanticweb.org/jessanrod3/ontologies/2022/2/Series#Person"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/jessanrod3/ontologies/2022/2/Series#Song",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Songs in the series"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#sameAs" : [ {
+    "@value" : "https://dbpedia.org/ontology/Song"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/jessanrod3/ontologies/2022/2/Series#Terelu_Campos",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.semanticweb.org/jessanrod3/ontologies/2022/2/Series#interprets" : [ {
+    "@id" : "http://www.semanticweb.org/jessanrod3/ontologies/2022/2/Series#Bárbara_Valiente"
+  } ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://www.semanticweb.org/jessanrod3/ontologies/2022/2/Series#Actor"
+  }, {
+    "@id" : "http://www.semanticweb.org/jessanrod3/ontologies/2022/2/Series#Woman"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/jessanrod3/ontologies/2022/2/Series#Woman",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "This class represents a female human"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#sameAs" : [ {
+    "@language" : "en",
+    "@value" : "https://dbpedia.org/ontology/Woman"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.semanticweb.org/jessanrod3/ontologies/2022/2/Series#Person"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/jessanrod3/ontologies/2022/2/Series#Yolanda_Ramos",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.semanticweb.org/jessanrod3/ontologies/2022/2/Series#interprets" : [ {
+    "@id" : "http://www.semanticweb.org/jessanrod3/ontologies/2022/2/Series#Noemí_Argüelles"
+  } ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://www.semanticweb.org/jessanrod3/ontologies/2022/2/Series#Actor"
+  }, {
+    "@id" : "http://www.semanticweb.org/jessanrod3/ontologies/2022/2/Series#Woman"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/jessanrod3/ontologies/2022/2/Series#appearsIn",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Describes an object property between a character and a season"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "_:genid1"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "_:genid4"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "http://www.w3.org/2002/07/owl#topObjectProperty"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/jessanrod3/ontologies/2022/2/Series#hasAward",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "_:genid16"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#boolean"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/jessanrod3/ontologies/2022/2/Series#hasBeenWonBy",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.semanticweb.org/jessanrod3/ontologies/2022/2/Series#Award"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "_:genid7"
+  } ],
+  "http://www.w3.org/2002/07/owl#inverseOf" : [ {
+    "@id" : "http://www.semanticweb.org/jessanrod3/ontologies/2022/2/Series#hasWon"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/jessanrod3/ontologies/2022/2/Series#hasWon",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Describes an object property between a series or a person and an award"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "_:genid10"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.semanticweb.org/jessanrod3/ontologies/2022/2/Series#Award"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "http://www.w3.org/2002/07/owl#topObjectProperty"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/jessanrod3/ontologies/2022/2/Series#interprets",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Describes an object property between an actor and a character"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.semanticweb.org/jessanrod3/ontologies/2022/2/Series#Actor"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.semanticweb.org/jessanrod3/ontologies/2022/2/Series#Character"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "http://www.w3.org/2002/07/owl#topObjectProperty"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/jessanrod3/ontologies/2022/2/Series#interpretsThemselves",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.semanticweb.org/jessanrod3/ontologies/2022/2/Series#Actor"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#boolean"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/jessanrod3/ontologies/2022/2/Series#numberOfEpisodes",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty", "http://www.w3.org/2002/07/owl#FunctionalProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Number of episodes of a season"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "_:genid19"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#sameAs" : [ {
+    "@value" : "http://dbpedia.org/ontology/numberOfEpisodes"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "http://www.w3.org/2002/07/owl#topDataProperty"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/jessanrod3/ontologies/2022/2/Series#sings",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty", "http://www.w3.org/2002/07/owl#IrreflexiveProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Describes an object property between a singer o character and a song sung by him/her"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "_:genid13"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.semanticweb.org/jessanrod3/ontologies/2022/2/Series#Song"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/jessanrod3/ontologies/2022/2/Series#soundtrackSong",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.semanticweb.org/jessanrod3/ontologies/2022/2/Series#Song"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#boolean"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/jessanrod3/ontologies/2022/2/Series#¡Ay,_Paquita!",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://www.semanticweb.org/jessanrod3/ontologies/2022/2/Series#Song"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/jessanrod3/ontologies/2022/2/Series#Álex_de_Lucas",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.semanticweb.org/jessanrod3/ontologies/2022/2/Series#interprets" : [ {
+    "@id" : "http://www.semanticweb.org/jessanrod3/ontologies/2022/2/Series#Álex_de_Lucas"
+  } ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://www.semanticweb.org/jessanrod3/ontologies/2022/2/Series#Actor"
+  }, {
+    "@id" : "http://www.semanticweb.org/jessanrod3/ontologies/2022/2/Series#MainCharacter"
+  }, {
+    "@id" : "http://www.semanticweb.org/jessanrod3/ontologies/2022/2/Series#Man"
+  }, {
+    "@id" : "http://www.semanticweb.org/jessanrod3/ontologies/2022/2/Series#RecurrentCharacter"
+  } ]
+}, {
+  "@id" : "http://www.w3.org/2000/01/rdf-schema#sameAs",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "http://www.w3.org/2002/07/owl#versionIRI",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "urn:swrl:var#x",
+  "@type" : [ "http://www.w3.org/2003/11/swrl#Variable" ]
+}, {
+  "@id" : "urn:swrl:var#y",
+  "@type" : [ "http://www.w3.org/2003/11/swrl#Variable" ]
+}, {
+  "@id" : "urn:swrl:var#z",
+  "@type" : [ "http://www.w3.org/2003/11/swrl#Variable" ]
+} ]
