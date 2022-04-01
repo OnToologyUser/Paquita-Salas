@@ -45,6 +45,9 @@
     "topDataProperty" : {
       "@id" : "http://www.w3.org/2002/07/owl#topDataProperty"
     },
+    "isRuleEnabled" : {
+      "@id" : "http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled"
+    },
     "SeriesAward" : {
       "@id" : "http://www.semanticweb.org/jessanrod3/ontologies/2022/2/Series#SeriesAward"
     },
@@ -57,6 +60,9 @@
     },
     "label" : {
       "@id" : "http://www.w3.org/2000/01/rdf-schema#label"
+    },
+    "BestSupportingActorAward" : {
+      "@id" : "http://www.semanticweb.org/jessanrod3/ontologies/2022/2/Series#BestSupportingActorAward"
     },
     "hasWon" : {
       "@id" : "http://www.semanticweb.org/jessanrod3/ontologies/2022/2/Series#hasWon",
@@ -78,6 +84,9 @@
     "Award" : {
       "@id" : "http://www.semanticweb.org/jessanrod3/ontologies/2022/2/Series#Award"
     },
+    "BestMainActressAward" : {
+      "@id" : "http://www.semanticweb.org/jessanrod3/ontologies/2022/2/Series#BestMainActressAward"
+    },
     "Actor" : {
       "@id" : "http://www.semanticweb.org/jessanrod3/ontologies/2022/2/Series#Actor"
     },
@@ -88,9 +97,6 @@
     "appearsIn" : {
       "@id" : "http://www.semanticweb.org/jessanrod3/ontologies/2022/2/Series#appearsIn",
       "@type" : "@id"
-    },
-    "SeriesCountry" : {
-      "@id" : "http://www.semanticweb.org/jessanrod3/ontologies/2022/2/Series#SeriesCountry"
     },
     "interprets" : {
       "@id" : "http://www.semanticweb.org/jessanrod3/ontologies/2022/2/Series#interprets",
@@ -111,9 +117,6 @@
     "comment" : {
       "@id" : "http://www.w3.org/2000/01/rdf-schema#comment"
     },
-    "SeriesLanguage" : {
-      "@id" : "http://www.semanticweb.org/jessanrod3/ontologies/2022/2/Series#SeriesLanguage"
-    },
     "RecurrentCharacter" : {
       "@id" : "http://www.semanticweb.org/jessanrod3/ontologies/2022/2/Series#RecurrentCharacter"
     },
@@ -126,9 +129,6 @@
     },
     "Season" : {
       "@id" : "http://www.semanticweb.org/jessanrod3/ontologies/2022/2/Series#Season"
-    },
-    "SeriesGenre" : {
-      "@id" : "http://www.semanticweb.org/jessanrod3/ontologies/2022/2/Series#SeriesGenre"
     }
   }
 }
