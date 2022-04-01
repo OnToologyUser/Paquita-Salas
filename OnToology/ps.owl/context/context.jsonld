@@ -39,9 +39,6 @@
     "BestSupportingActressAward" : {
       "@id" : "http://www.semanticweb.org/jessanrod3/ontologies/2022/2/Series#BestSupportingActressAward"
     },
-    "Thing" : {
-      "@id" : "http://www.w3.org/2002/07/owl#Thing"
-    },
     "topDataProperty" : {
       "@id" : "http://www.w3.org/2002/07/owl#topDataProperty"
     },
@@ -50,6 +47,10 @@
     },
     "SeriesAward" : {
       "@id" : "http://www.semanticweb.org/jessanrod3/ontologies/2022/2/Series#SeriesAward"
+    },
+    "hasWorkedIn" : {
+      "@id" : "http://www.semanticweb.org/jessanrod3/ontologies/2022/2/Series#hasWorkedIn",
+      "@type" : "@id"
     },
     "Director" : {
       "@id" : "http://www.semanticweb.org/jessanrod3/ontologies/2022/2/Series#Director"
@@ -90,13 +91,23 @@
     "Actor" : {
       "@id" : "http://www.semanticweb.org/jessanrod3/ontologies/2022/2/Series#Actor"
     },
+    "Winner" : {
+      "@id" : "http://www.semanticweb.org/jessanrod3/ontologies/2022/2/Series#Winner"
+    },
     "topObjectProperty" : {
       "@id" : "http://www.w3.org/2002/07/owl#topObjectProperty",
+      "@type" : "@id"
+    },
+    "hasWorker" : {
+      "@id" : "http://www.semanticweb.org/jessanrod3/ontologies/2022/2/Series#hasWorker",
       "@type" : "@id"
     },
     "appearsIn" : {
       "@id" : "http://www.semanticweb.org/jessanrod3/ontologies/2022/2/Series#appearsIn",
       "@type" : "@id"
+    },
+    "SeriesThing" : {
+      "@id" : "http://www.w3.org/2002/07/owl#SeriesThing"
     },
     "interprets" : {
       "@id" : "http://www.semanticweb.org/jessanrod3/ontologies/2022/2/Series#interprets",
