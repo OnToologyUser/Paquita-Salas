@@ -20,6 +20,10 @@ Created by Jesús Sánchez Rodríguez"""@en .
 <http://purl.org/dc/terms/license> rdf:type owl:AnnotationProperty .
 
 
+###  http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled
+<http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled> rdf:type owl:AnnotationProperty .
+
+
 ###  http://www.w3.org/2000/01/rdf-schema#sameAs
 rdfs:sameAs rdf:type owl:AnnotationProperty .
 
@@ -116,7 +120,8 @@ owl:versionIRI rdf:type owl:AnnotationProperty .
                   rdfs:subPropertyOf owl:topDataProperty ;
                   rdf:type owl:FunctionalProperty ;
                   rdfs:domain [ rdf:type owl:Class ;
-                                owl:unionOf ( :Season
+                                owl:unionOf ( :Character
+                                              :Season
                                               :Series
                                             )
                               ] ;
@@ -141,6 +146,11 @@ owl:versionIRI rdf:type owl:AnnotationProperty .
                              [ rdf:type owl:Restriction ;
                                owl:onProperty :hasBeenWonBy ;
                                owl:allValuesFrom :Actor
+                             ] ,
+                             [ rdf:type owl:Restriction ;
+                               owl:onProperty :hasBeenWonBy ;
+                               owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                               owl:onClass :Actor
                              ] ;
              owl:disjointWith :SeriesAward ;
              rdfs:comment "Awards related to actors"@en .
@@ -150,22 +160,15 @@ owl:versionIRI rdf:type owl:AnnotationProperty .
 :Actor rdf:type owl:Class ;
        rdfs:subClassOf :Person ;
        rdfs:comment "This classe represents an actor or actress" ;
+       rdfs:label "Actor"@en ;
        rdfs:sameAs "https://dbpedia.org/ontology/Actor"@en .
 
 
 ###  http://www.semanticweb.org/jessanrod3/ontologies/2022/2/Series#Award
 :Award rdf:type owl:Class ;
-       rdfs:subClassOf owl:Thing ,
-                       [ rdf:type owl:Class ;
-                         owl:unionOf ( :Series
-                                       [ rdf:type owl:Restriction ;
-                                         owl:onProperty :hasBeenWonBy ;
-                                         owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
-                                         owl:onClass :Person
-                                       ]
-                                     )
-                       ] ;
+       rdfs:subClassOf owl:Thing ;
        rdfs:comment "Awards won (or nominated to) by a person or series"@en ;
+       rdfs:label "Award"@en ;
        rdfs:sameAs "https://dbpedia.org/ontology/Award"@en .
 
 
@@ -182,6 +185,18 @@ owl:versionIRI rdf:type owl:AnnotationProperty .
                     rdfs:comment "Award related to the best main male actor"@en .
 
 
+###  http://www.semanticweb.org/jessanrod3/ontologies/2022/2/Series#BestMainActressAward
+:BestMainActressAward rdf:type owl:Class ;
+                      rdfs:subClassOf :ActingAward ;
+                      rdfs:comment "Award related to the best main female actor"@en .
+
+
+###  http://www.semanticweb.org/jessanrod3/ontologies/2022/2/Series#BestSupportingActorAward
+:BestSupportingActorAward rdf:type owl:Class ;
+                          rdfs:subClassOf :ActingAward ;
+                          rdfs:comment "Award related to the best supporting actor"@en .
+
+
 ###  http://www.semanticweb.org/jessanrod3/ontologies/2022/2/Series#BestSupportingActressAward
 :BestSupportingActressAward rdf:type owl:Class ;
                             rdfs:subClassOf :ActingAward ;
@@ -191,6 +206,7 @@ owl:versionIRI rdf:type owl:AnnotationProperty .
 ###  http://www.semanticweb.org/jessanrod3/ontologies/2022/2/Series#Character
 :Character rdf:type owl:Class ;
            rdfs:comment "This class represents a character in the series"@en ;
+           rdfs:label "Character"@en ;
            rdfs:sameAs "https://dbpedia.org/ontology/FictionalCharacter"@en .
 
 
@@ -229,6 +245,7 @@ owl:versionIRI rdf:type owl:AnnotationProperty .
 ###  http://www.semanticweb.org/jessanrod3/ontologies/2022/2/Series#Person
 :Person rdf:type owl:Class ;
         rdfs:comment "This class represents a real person" ;
+        rdfs:label "Person"@en ;
         rdfs:sameAs "https://dbpedia.org/ontology/Person"@en .
 
 
@@ -246,6 +263,7 @@ owl:versionIRI rdf:type owl:AnnotationProperty .
 ###  http://www.semanticweb.org/jessanrod3/ontologies/2022/2/Series#Series
 :Series rdf:type owl:Class ;
         rdfs:comment "This class denotes the serie"@en ;
+        rdfs:label "Series"@en ;
         rdfs:sameAs "http://dbpedia.org/ontology/TelevisionShow"@en .
 
 
@@ -257,24 +275,6 @@ owl:versionIRI rdf:type owl:AnnotationProperty .
                                owl:allValuesFrom :Series
                              ] ;
              rdfs:comment "Award related to a series"@en .
-
-
-###  http://www.semanticweb.org/jessanrod3/ontologies/2022/2/Series#SeriesCountry
-:SeriesCountry rdf:type owl:Class ;
-               rdfs:comment "The country where series is based in"@en ;
-               rdfs:sameAs "https://dbpedia.org/property/country"@en .
-
-
-###  http://www.semanticweb.org/jessanrod3/ontologies/2022/2/Series#SeriesGenre
-:SeriesGenre rdf:type owl:Class ;
-             rdfs:comment "Genre of series"@en ;
-             rdfs:sameAs "https://dbpedia.org/ontology/Genre"@en .
-
-
-###  http://www.semanticweb.org/jessanrod3/ontologies/2022/2/Series#SeriesLanguage
-:SeriesLanguage rdf:type owl:Class ;
-                rdfs:comment "This class represents the main language spoken in the series"@en ;
-                rdfs:sameAs "http://dbpedia.org/property/language"@en .
 
 
 ###  http://www.semanticweb.org/jessanrod3/ontologies/2022/2/Series#Singer
@@ -311,9 +311,10 @@ owl:versionIRI rdf:type owl:AnnotationProperty .
 ###  http://www.semanticweb.org/jessanrod3/ontologies/2022/2/Series#Belinda_Washington
 :Belinda_Washington rdf:type owl:NamedIndividual ,
                              :Actor ,
-                             :GuestCharacter ,
+                             :Character ,
                              :Woman ;
-                    :interprets :Belinda_Washington .
+                    :interprets :Belinda_Washington ;
+                    :numberOfEpisodes 3 .
 
 
 ###  http://www.semanticweb.org/jessanrod3/ontologies/2022/2/Series#Belén_Cuesta
@@ -325,8 +326,8 @@ owl:versionIRI rdf:type owl:AnnotationProperty .
 
 ###  http://www.semanticweb.org/jessanrod3/ontologies/2022/2/Series#Belén_de_Lucas
 :Belén_de_Lucas rdf:type owl:NamedIndividual ,
-                         :GuestCharacter ,
-                         :MainCharacter .
+                         :Character ;
+                :numberOfEpisodes 15 .
 
 
 ###  http://www.semanticweb.org/jessanrod3/ontologies/2022/2/Series#Best_Comedy_Series_2017
@@ -377,29 +378,32 @@ owl:versionIRI rdf:type owl:AnnotationProperty .
 ###  http://www.semanticweb.org/jessanrod3/ontologies/2022/2/Series#Brays_Efe
 :Brays_Efe rdf:type owl:NamedIndividual ,
                     :Actor ;
+           :hasWon :Best_Main_Actor_2017 ;
            :interprets :Paquita_Salas .
 
 
 ###  http://www.semanticweb.org/jessanrod3/ontologies/2022/2/Series#Bárbara_Valiente
 :Bárbara_Valiente rdf:type owl:NamedIndividual ,
-                           :GuestCharacter .
+                           :Character .
 
 
 ###  http://www.semanticweb.org/jessanrod3/ontologies/2022/2/Series#Lidia_San_José
 :Lidia_San_José rdf:type owl:NamedIndividual ,
                          :Actor ,
+                         :Character ,
                          :Woman ;
                 :interprets :Lidia_San_José .
 
 
 ###  http://www.semanticweb.org/jessanrod3/ontologies/2022/2/Series#Magüi_Moreno
 :Magüi_Moreno rdf:type owl:NamedIndividual ,
-                       :MainCharacter .
+                       :Character .
 
 
 ###  http://www.semanticweb.org/jessanrod3/ontologies/2022/2/Series#Mariona
 :Mariona rdf:type owl:NamedIndividual ,
-                  :MainCharacter .
+                  :Character ;
+         :numberOfEpisodes 16 .
 
 
 ###  http://www.semanticweb.org/jessanrod3/ontologies/2022/2/Series#Mariona_Terés
@@ -411,9 +415,9 @@ owl:versionIRI rdf:type owl:AnnotationProperty .
 
 ###  http://www.semanticweb.org/jessanrod3/ontologies/2022/2/Series#Noemí_Argüelles
 :Noemí_Argüelles rdf:type owl:NamedIndividual ,
-                          :GuestCharacter ,
-                          :MainCharacter ;
-                 :sings <http://www.semanticweb.org/jessanrod3/ontologies/2022/2/Series#5_deditos> .
+                          :Character ;
+                 :sings <http://www.semanticweb.org/jessanrod3/ontologies/2022/2/Series#5_deditos> ;
+                 :numberOfEpisodes 10 .
 
 
 ###  http://www.semanticweb.org/jessanrod3/ontologies/2022/2/Series#PaquitaSalas
@@ -427,10 +431,11 @@ owl:versionIRI rdf:type owl:AnnotationProperty .
 
 ###  http://www.semanticweb.org/jessanrod3/ontologies/2022/2/Series#Paquita_Salas
 :Paquita_Salas rdf:type owl:NamedIndividual ,
-                        :MainCharacter ;
+                        :Character ;
                :appearsIn :Season1 ,
                           :Season2 ,
-                          :Season3 .
+                          :Season3 ;
+               :numberOfEpisodes 16 .
 
 
 ###  http://www.semanticweb.org/jessanrod3/ontologies/2022/2/Series#Rosalía
@@ -479,9 +484,8 @@ owl:versionIRI rdf:type owl:AnnotationProperty .
 ###  http://www.semanticweb.org/jessanrod3/ontologies/2022/2/Series#Álex_de_Lucas
 :Álex_de_Lucas rdf:type owl:NamedIndividual ,
                         :Actor ,
-                        :MainCharacter ,
-                        :Man ,
-                        :RecurrentCharacter ;
+                        :Character ,
+                        :Man ;
                :interprets :Álex_de_Lucas .
 
 
@@ -499,13 +503,51 @@ owl:versionIRI rdf:type owl:AnnotationProperty .
 #    Rules
 #################################################################
 
+:x rdf:type <http://www.w3.org/2003/11/swrl#Variable> .
+
+:y rdf:type <http://www.w3.org/2003/11/swrl#Variable> .
+
 <urn:swrl:var#x> rdf:type <http://www.w3.org/2003/11/swrl#Variable> .
 
 <urn:swrl:var#y> rdf:type <http://www.w3.org/2003/11/swrl#Variable> .
 
 <urn:swrl:var#z> rdf:type <http://www.w3.org/2003/11/swrl#Variable> .
 
-[ rdfs:comment "if an actor interprets a character and the character appears in a Season, then the actor appears in the season"@en ;
+[ <http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled> "true"^^xsd:boolean ;
+   rdfs:comment "" ;
+   rdfs:label "S4" ;
+   rdf:type <http://www.w3.org/2003/11/swrl#Imp> ;
+   <http://www.w3.org/2003/11/swrl#body> [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                           rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#ClassAtom> ;
+                                                       <http://www.w3.org/2003/11/swrl#classPredicate> :Singer ;
+                                                       <http://www.w3.org/2003/11/swrl#argument1> :x
+                                                     ] ;
+                                           rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                      rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#ClassAtom> ;
+                                                                  <http://www.w3.org/2003/11/swrl#classPredicate> :Song ;
+                                                                  <http://www.w3.org/2003/11/swrl#argument1> :y
+                                                                ] ;
+                                                      rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                                 rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#IndividualPropertyAtom> ;
+                                                                             <http://www.w3.org/2003/11/swrl#propertyPredicate> :sings ;
+                                                                             <http://www.w3.org/2003/11/swrl#argument1> :x ;
+                                                                             <http://www.w3.org/2003/11/swrl#argument2> :y
+                                                                           ] ;
+                                                                 rdf:rest rdf:nil
+                                                               ]
+                                                    ]
+                                         ] ;
+   <http://www.w3.org/2003/11/swrl#head> [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                           rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom> ;
+                                                       <http://www.w3.org/2003/11/swrl#propertyPredicate> :soundtrackSong ;
+                                                       <http://www.w3.org/2003/11/swrl#argument1> :y ;
+                                                       <http://www.w3.org/2003/11/swrl#argument2> "true"^^xsd:boolean
+                                                     ] ;
+                                           rdf:rest rdf:nil
+                                         ]
+ ] .
+
+[ rdfs:comment "If an actor interprets a character and the character appears in a season, then the actor appears in the season"@en ;
    rdf:type <http://www.w3.org/2003/11/swrl#Imp> ;
    <http://www.w3.org/2003/11/swrl#body> [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
                                            rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#ClassAtom> ;
@@ -529,13 +571,7 @@ owl:versionIRI rdf:type owl:AnnotationProperty .
                                                                                         <http://www.w3.org/2003/11/swrl#argument1> <urn:swrl:var#y> ;
                                                                                         <http://www.w3.org/2003/11/swrl#argument2> <urn:swrl:var#z>
                                                                                       ] ;
-                                                                            rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
-                                                                                       rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#ClassAtom> ;
-                                                                                                   <http://www.w3.org/2003/11/swrl#classPredicate> :Season ;
-                                                                                                   <http://www.w3.org/2003/11/swrl#argument1> <urn:swrl:var#z>
-                                                                                                 ] ;
-                                                                                       rdf:rest rdf:nil
-                                                                                     ]
+                                                                            rdf:rest rdf:nil
                                                                           ]
                                                                ]
                                                     ]
@@ -550,91 +586,150 @@ owl:versionIRI rdf:type owl:AnnotationProperty .
                                          ]
  ] .
 
-[ rdfs:comment "if an actor interprets him(her)self, value = true"@en ;
+[ rdfs:comment "if a character appears in more than 12 episodes, it's a main character"@en ;
    rdf:type <http://www.w3.org/2003/11/swrl#Imp> ;
    <http://www.w3.org/2003/11/swrl#body> [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
                                            rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#ClassAtom> ;
-                                                       <http://www.w3.org/2003/11/swrl#classPredicate> :Actor ;
+                                                       <http://www.w3.org/2003/11/swrl#classPredicate> :Character ;
                                                        <http://www.w3.org/2003/11/swrl#argument1> <urn:swrl:var#x>
                                                      ] ;
                                            rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
-                                                      rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#IndividualPropertyAtom> ;
-                                                                  <http://www.w3.org/2003/11/swrl#propertyPredicate> :interprets ;
+                                                      rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom> ;
+                                                                  <http://www.w3.org/2003/11/swrl#propertyPredicate> :numberOfEpisodes ;
                                                                   <http://www.w3.org/2003/11/swrl#argument1> <urn:swrl:var#x> ;
-                                                                  <http://www.w3.org/2003/11/swrl#argument2> <urn:swrl:var#x>
+                                                                  <http://www.w3.org/2003/11/swrl#argument2> <urn:swrl:var#y>
+                                                                ] ;
+                                                      rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                                 rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#BuiltinAtom> ;
+                                                                             <http://www.w3.org/2003/11/swrl#builtin> <http://www.w3.org/2003/11/swrlb#greaterThan> ;
+                                                                             <http://www.w3.org/2003/11/swrl#arguments> [ rdf:type rdf:List ;
+                                                                                                                          rdf:first <urn:swrl:var#y> ;
+                                                                                                                          rdf:rest [ rdf:type rdf:List ;
+                                                                                                                                     rdf:first 12 ;
+                                                                                                                                     rdf:rest rdf:nil
+                                                                                                                                   ]
+                                                                                                                        ]
+                                                                           ] ;
+                                                                 rdf:rest rdf:nil
+                                                               ]
+                                                    ]
+                                         ] ;
+   <http://www.w3.org/2003/11/swrl#head> [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                           rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#ClassAtom> ;
+                                                       <http://www.w3.org/2003/11/swrl#classPredicate> :MainCharacter ;
+                                                       <http://www.w3.org/2003/11/swrl#argument1> <urn:swrl:var#x>
+                                                     ] ;
+                                           rdf:rest rdf:nil
+                                         ]
+ ] .
+
+[ rdfs:comment "if a character appears in between 5  and 12 episodes, it's a recurrent character"@en ;
+   rdf:type <http://www.w3.org/2003/11/swrl#Imp> ;
+   <http://www.w3.org/2003/11/swrl#body> [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                           rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#ClassAtom> ;
+                                                       <http://www.w3.org/2003/11/swrl#classPredicate> :Character ;
+                                                       <http://www.w3.org/2003/11/swrl#argument1> <urn:swrl:var#x>
+                                                     ] ;
+                                           rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                      rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom> ;
+                                                                  <http://www.w3.org/2003/11/swrl#propertyPredicate> :numberOfEpisodes ;
+                                                                  <http://www.w3.org/2003/11/swrl#argument1> <urn:swrl:var#x> ;
+                                                                  <http://www.w3.org/2003/11/swrl#argument2> <urn:swrl:var#y>
+                                                                ] ;
+                                                      rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                                 rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#BuiltinAtom> ;
+                                                                             <http://www.w3.org/2003/11/swrl#builtin> <http://www.w3.org/2003/11/swrlb#greaterThan> ;
+                                                                             <http://www.w3.org/2003/11/swrl#arguments> [ rdf:type rdf:List ;
+                                                                                                                          rdf:first <urn:swrl:var#y> ;
+                                                                                                                          rdf:rest [ rdf:type rdf:List ;
+                                                                                                                                     rdf:first 5 ;
+                                                                                                                                     rdf:rest rdf:nil
+                                                                                                                                   ]
+                                                                                                                        ]
+                                                                           ] ;
+                                                                 rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                                            rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#BuiltinAtom> ;
+                                                                                        <http://www.w3.org/2003/11/swrl#builtin> <http://www.w3.org/2003/11/swrlb#lessThanOrEqual> ;
+                                                                                        <http://www.w3.org/2003/11/swrl#arguments> [ rdf:type rdf:List ;
+                                                                                                                                     rdf:first <urn:swrl:var#y> ;
+                                                                                                                                     rdf:rest [ rdf:type rdf:List ;
+                                                                                                                                                rdf:first 12 ;
+                                                                                                                                                rdf:rest rdf:nil
+                                                                                                                                              ]
+                                                                                                                                   ]
+                                                                                      ] ;
+                                                                            rdf:rest rdf:nil
+                                                                          ]
+                                                               ]
+                                                    ]
+                                         ] ;
+   <http://www.w3.org/2003/11/swrl#head> [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                           rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#ClassAtom> ;
+                                                       <http://www.w3.org/2003/11/swrl#classPredicate> :RecurrentCharacter ;
+                                                       <http://www.w3.org/2003/11/swrl#argument1> <urn:swrl:var#x>
+                                                     ] ;
+                                           rdf:rest rdf:nil
+                                         ]
+ ] .
+
+[ rdfs:comment "if a character appears in less than 5 episodes, it's a guest"@en ;
+   rdf:type <http://www.w3.org/2003/11/swrl#Imp> ;
+   <http://www.w3.org/2003/11/swrl#body> [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                           rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#ClassAtom> ;
+                                                       <http://www.w3.org/2003/11/swrl#classPredicate> :Character ;
+                                                       <http://www.w3.org/2003/11/swrl#argument1> <urn:swrl:var#x>
+                                                     ] ;
+                                           rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                      rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom> ;
+                                                                  <http://www.w3.org/2003/11/swrl#propertyPredicate> :numberOfEpisodes ;
+                                                                  <http://www.w3.org/2003/11/swrl#argument1> <urn:swrl:var#x> ;
+                                                                  <http://www.w3.org/2003/11/swrl#argument2> <urn:swrl:var#y>
+                                                                ] ;
+                                                      rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                                 rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#BuiltinAtom> ;
+                                                                             <http://www.w3.org/2003/11/swrl#builtin> <http://www.w3.org/2003/11/swrlb#lessThanOrEqual> ;
+                                                                             <http://www.w3.org/2003/11/swrl#arguments> [ rdf:type rdf:List ;
+                                                                                                                          rdf:first <urn:swrl:var#y> ;
+                                                                                                                          rdf:rest [ rdf:type rdf:List ;
+                                                                                                                                     rdf:first 5 ;
+                                                                                                                                     rdf:rest rdf:nil
+                                                                                                                                   ]
+                                                                                                                        ]
+                                                                           ] ;
+                                                                 rdf:rest rdf:nil
+                                                               ]
+                                                    ]
+                                         ] ;
+   <http://www.w3.org/2003/11/swrl#head> [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                           rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#ClassAtom> ;
+                                                       <http://www.w3.org/2003/11/swrl#classPredicate> :GuestCharacter ;
+                                                       <http://www.w3.org/2003/11/swrl#argument1> <urn:swrl:var#x>
+                                                     ] ;
+                                           rdf:rest rdf:nil
+                                         ]
+ ] .
+
+[ rdfs:comment "if an individual appears in a season, then it appears in the series"@en ;
+   rdf:type <http://www.w3.org/2003/11/swrl#Imp> ;
+   <http://www.w3.org/2003/11/swrl#body> [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                           rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#ClassAtom> ;
+                                                       <http://www.w3.org/2003/11/swrl#classPredicate> :Season ;
+                                                       <http://www.w3.org/2003/11/swrl#argument1> <urn:swrl:var#y>
+                                                     ] ;
+                                           rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                      rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#IndividualPropertyAtom> ;
+                                                                  <http://www.w3.org/2003/11/swrl#propertyPredicate> :appearsIn ;
+                                                                  <http://www.w3.org/2003/11/swrl#argument1> <urn:swrl:var#x> ;
+                                                                  <http://www.w3.org/2003/11/swrl#argument2> <urn:swrl:var#y>
                                                                 ] ;
                                                       rdf:rest rdf:nil
                                                     ]
                                          ] ;
    <http://www.w3.org/2003/11/swrl#head> [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
-                                           rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom> ;
-                                                       <http://www.w3.org/2003/11/swrl#propertyPredicate> :interpretsThemselves ;
+                                           rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#IndividualPropertyAtom> ;
+                                                       <http://www.w3.org/2003/11/swrl#propertyPredicate> :appearsIn ;
                                                        <http://www.w3.org/2003/11/swrl#argument1> <urn:swrl:var#x> ;
-                                                       <http://www.w3.org/2003/11/swrl#argument2> "true"^^xsd:boolean
-                                                     ] ;
-                                           rdf:rest rdf:nil
-                                         ]
- ] .
-
-[ rdfs:comment "If has won at least 1 award, hasAward is true"@en ;
-   rdf:type <http://www.w3.org/2003/11/swrl#Imp> ;
-   <http://www.w3.org/2003/11/swrl#body> [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
-                                           rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#ClassAtom> ;
-                                                       <http://www.w3.org/2003/11/swrl#classPredicate> :Person ;
-                                                       <http://www.w3.org/2003/11/swrl#argument1> <urn:swrl:var#x>
-                                                     ] ;
-                                           rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
-                                                      rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#ClassAtom> ;
-                                                                  <http://www.w3.org/2003/11/swrl#classPredicate> :Award ;
-                                                                  <http://www.w3.org/2003/11/swrl#argument1> <urn:swrl:var#y>
-                                                                ] ;
-                                                      rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
-                                                                 rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#IndividualPropertyAtom> ;
-                                                                             <http://www.w3.org/2003/11/swrl#propertyPredicate> :hasWon ;
-                                                                             <http://www.w3.org/2003/11/swrl#argument1> <urn:swrl:var#x> ;
-                                                                             <http://www.w3.org/2003/11/swrl#argument2> <urn:swrl:var#y>
-                                                                           ] ;
-                                                                 rdf:rest rdf:nil
-                                                               ]
-                                                    ]
-                                         ] ;
-   <http://www.w3.org/2003/11/swrl#head> [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
-                                           rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom> ;
-                                                       <http://www.w3.org/2003/11/swrl#propertyPredicate> :hasAward ;
-                                                       <http://www.w3.org/2003/11/swrl#argument1> <urn:swrl:var#x> ;
-                                                       <http://www.w3.org/2003/11/swrl#argument2> "true"^^xsd:boolean
-                                                     ] ;
-                                           rdf:rest rdf:nil
-                                         ]
- ] .
-
-[ rdfs:comment "If a song is sung by a singer, the song belongs to the soundtrack"@en ;
-   rdf:type <http://www.w3.org/2003/11/swrl#Imp> ;
-   <http://www.w3.org/2003/11/swrl#body> [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
-                                           rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#ClassAtom> ;
-                                                       <http://www.w3.org/2003/11/swrl#classPredicate> :Song ;
-                                                       <http://www.w3.org/2003/11/swrl#argument1> <urn:swrl:var#y>
-                                                     ] ;
-                                           rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
-                                                      rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#IndividualPropertyAtom> ;
-                                                                  <http://www.w3.org/2003/11/swrl#propertyPredicate> :sings ;
-                                                                  <http://www.w3.org/2003/11/swrl#argument1> <urn:swrl:var#x> ;
-                                                                  <http://www.w3.org/2003/11/swrl#argument2> <urn:swrl:var#y>
-                                                                ] ;
-                                                      rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
-                                                                 rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#ClassAtom> ;
-                                                                             <http://www.w3.org/2003/11/swrl#classPredicate> :Singer ;
-                                                                             <http://www.w3.org/2003/11/swrl#argument1> <urn:swrl:var#x>
-                                                                           ] ;
-                                                                 rdf:rest rdf:nil
-                                                               ]
-                                                    ]
-                                         ] ;
-   <http://www.w3.org/2003/11/swrl#head> [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
-                                           rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom> ;
-                                                       <http://www.w3.org/2003/11/swrl#propertyPredicate> :soundtrackSong ;
-                                                       <http://www.w3.org/2003/11/swrl#argument1> <urn:swrl:var#y> ;
-                                                       <http://www.w3.org/2003/11/swrl#argument2> "true"^^xsd:boolean
+                                                       <http://www.w3.org/2003/11/swrl#argument2> :PaquitaSalas
                                                      ] ;
                                            rdf:rest rdf:nil
                                          ]
